@@ -18,11 +18,15 @@ class SketchPad {
 
         this.ctx = this.canvas.getContext('2d');
 
+        this.reset();
+
+        this.#addEventListener();
+    }
+
+    reset() {
         this.paths = [];
         this.isDrawing = false;
         this.#redraw();
-
-        this.#addEventListener();
     }
 
     #addEventListener() {
